@@ -1,0 +1,41 @@
+<section class="l-section wpb_row height_custom">
+    <div class="l-section-h i-cf">
+        <div class="g-cols vc_row type_default valign_top">
+            <% for(let i=0;i<3;i++){ %>
+            <div class="vc_col-sm-2 wpb_column vc_column_container">
+                <div class="vc_column-inner">
+                    <div class="wpb_wrapper">
+                        <div class="wpb_text_column">
+                            <div class="wpb_wrapper">
+                                <% for(let j = i*5; j < 5+5*i;j++){ %>
+                                <p style="text-align: center;"><a title="Schädlingsbekämpfung <%= stadtone.hauptort %>"
+                                        href="/<%= keyword %><%= arr[j].hauptortUrl %>/<%= arr[j].ortUrl %>">Wespenumsiedlung
+                                        <%= arr[j].ort %></a></p>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+            <% for(let i=0;i<3;i++){ %>
+            <div class="vc_col-sm-2 wpb_column vc_column_container">
+                <div class="vc_column-inner">
+                    <div class="wpb_wrapper">
+                        <div class="wpb_text_column">
+                            <div class="wpb_wrapper">
+                                <% for(let j = i*5; j < 5+5*i;j++){ %>
+                                <p style="text-align: center;"><a title="Schädlingsbekämpfung <%= stadtone.hauptort %>"
+                                        href="/schaedlingsbekaempfung-und-kammerjaeger-<%= arr[j].hauptortUrl %>/<%= arr[j].ortUrl %>">Schädlingsbekämpfung
+                                        <%= arr[j].ort %></a></p>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+
+        </div>
+    </div>
+</section>

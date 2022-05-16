@@ -1,0 +1,50 @@
+<form class="w-form  layout_ver for_cform us_form_1 contact-form" id="demo-form">
+    <div class="w-form-h">
+        <div class="w-form-row for_text">
+            <div class="w-form-row-field">
+                <input aria-label="Name" type="text" name="us_form_1_text_1" id="us_form_1_text_1" placeholder="Name" />
+            </div>
+            <div class="w-form-row-state">Bitte füllen Sie dieses Feld aus.</div>
+        </div>
+        <div class="w-form-row for_email">
+            <div class="w-form-row-field">
+                <input aria-label="E-Mail" type="email" name="us_form_1_email_1" id="us_form_1_email_1"
+                    placeholder="E-Mail" />
+            </div>
+            <div class="w-form-row-state">Bitte gib eine gültige E-Mail-Adresse ein.
+            </div>
+        </div>
+        <div class="w-form-row for_text">
+            <div class="w-form-row-field">
+                <input aria-label="Telefon" type="text" name="us_form_1_text_2" id="us_form_1_text_2"
+                    placeholder="Telefon" />
+            </div>
+            <div class="w-form-row-state">Bitte füllen Sie dieses Feld aus.</div>
+        </div>
+        <div class="w-form-row for_textarea">
+            <div class="w-form-row-field">
+                <textarea aria-label="Text" name="us_form_1_textarea_1" id="us_form_1_textarea_1"
+                    placeholder="Teilen Sie uns Ihr Anliegen mit..."></textarea>
+            </div>
+            <div class="w-form-row-state">Bitte füllen Sie dieses Feld aus.</div>
+        </div>
+        <input type="hidden" name="action" value="us_ajax_cform" /><input type="hidden" name="post_id"
+            value="6635" /><input type="hidden" name="form_index" value="1" />
+        <div class="w-form-row for_submit align_default">
+            <div class="w-form-row-field">
+                <button id="btn-contact-form" class="w-btn  us-btn-style_16 g-recaptcha" aria-label="Senden"
+                    type="submit">
+                    <span class="g-preloader type_1"></span>
+                    <span class="w-btn-label">Senden</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="email_success" class="w-form-message type_success hidden">Danke! Ihre Nachricht wurde versendet</div>
+    <div class="w-form-message"></div>
+    <div class="w-form-json hidden" onclick='return {"ajaxurl":"https:\/\/<%= DOMAIN %>\/wp-admin\/admin-ajax.php"}'>
+    </div>
+</form>
+<div style="visibility: hidden" id="site_key"><%= SITE_KEY %></div>
+<script src="https://www.google.com/recaptcha/api.js?render=<%= SITE_KEY %>"></script>
+<script src="/js/contactform.js"></script>
